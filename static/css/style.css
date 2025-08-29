@@ -1,0 +1,141 @@
+/* Background Gradient */
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInBody 1.2s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    animation: slideUp 1s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.card-header h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffdd57;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: fadeInDown 1.2s ease;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.card-header p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #ffffff;  /* pure white for full visibility */
+    text-align: center;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+
+    /* visual enhancements */
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to right, #ffffff, #dcdcdc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: fadeInUp 1.5s ease;
+}
+
+
+/* Labels */
+label {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    display: block;
+    margin: 10px 0;
+    animation: fadeIn 1.4s ease;
+}
+
+/* Select & Input */
+select, input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+select:focus, input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
+}
+
+/* Button */
+button {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #dd2476, #ff512f);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 87, 87, 0.6);
+}
+
+/* Prediction Result */
+#prediction {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #00ffcc;
+    animation: fadeIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeInBody {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeInDown {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes pulse {
+    0% {box-shadow: 0 0 0 0 rgba(255, 87, 87, 0.5);}
+    70% {box-shadow: 0 0 0 15px rgba(255, 87, 87, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(255, 87, 87, 0);}
+}
