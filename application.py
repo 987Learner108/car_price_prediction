@@ -8,7 +8,7 @@ import pandas as pd
 app = Flask(__name__)
 
 model = joblib.load(open('LinearRegressionModel.joblib', 'rb'))
-car = pd.read_csv("Cleaned car.csv")
+car = pd.read_csv("cleaned car.csv")
 
 @app.route('/')
 def index():
